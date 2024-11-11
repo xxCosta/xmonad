@@ -12,7 +12,8 @@ import XMonad.Util.SpawnOnce
 import Data.Monoid
 import System.Exit
 
-
+-- LAYOUT
+import XMonad.Layout.Spacing
 
 
 
@@ -281,7 +282,7 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = myLayout,
+        layoutHook         = spacingWithEdge 3 $ myLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
